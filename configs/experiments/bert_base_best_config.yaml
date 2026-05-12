@@ -1,0 +1,29 @@
+# Este archivo se completa DESPUÉS del ablation study (C1–C4).
+# Copiar la mejor configuración encontrada y cambiar solo
+# base_model_type y model_name.
+#
+# Ejemplo basado en C4 como mejor config:
+
+experiment_name: "bert_base_best_config"
+base_model_type: "bert"
+model_name: "bert-base-uncased"
+
+# ── Heredar de la mejor configuración ──────────────────────────
+# Reemplazar los ??? con los valores de la config ganadora.
+freeze_strategy: "???"          # ej: "frozen_all" si C4 gana
+trainable_layers: null          # solo si freeze_strategy = "partial"
+classifier_type: "???"          # ej: "bottleneck" si C4 gana
+hidden_dims: []                 # ej: [128, 64] si C4 gana
+
+dropout: 0.1
+learning_rate: 2.0e-5
+weight_decay: 0.01
+num_epochs: 3
+seed: 42
+fp16: true
+gradient_accumulation_steps: 1
+evaluation_strategy: "epoch"
+save_strategy: "epoch"
+logging_steps: 50
+limit_train_samples: null
+limit_eval_samples: null
