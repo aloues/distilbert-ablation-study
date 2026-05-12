@@ -96,7 +96,8 @@ def main():
     apply_freeze_strategy(model, exp_cfg)
 
     # ── FASE DE ENTRENAMIENTO ─────────────────────────────────────────────────
-    torch.cuda.reset_peak_memory_stats()  # resetear pico para capturar solo el entrenamiento
+    if torch.cuda.is_available():
+        torch.cuda.reset_peak_memory_stats()    
     model, history, training_time = train_and_evaluate(
         model, loaders, exp_cfg, dataset_cfg, device
     )
