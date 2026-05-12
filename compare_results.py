@@ -206,8 +206,14 @@ def plot_bubble_chart(results: List[Dict], output_path: Path) -> None:
         for exp, color in EXPERIMENT_COLORS.items()
         if any(r.get("experiment") == exp for r in results)
     ]
-    fig.legend(handles=legend_patches, loc="lower center", ncol=len(legend_patches),
-               bbox_to_anchor=(0.5, -0.06), fontsize=9)
+    if legend_patches:
+        fig.legend(
+            handles=legend_patches,
+            loc="lower center",
+            ncol=max(1, len(legend_patches)),
+            bbox_to_anchor=(0.5, -0.06),
+            fontsize=9
+    )
 
     plt.tight_layout()
     output_path = Path(output_path)
