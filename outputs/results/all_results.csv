@@ -1,0 +1,4 @@
+dataset,experiment,base_model_type,classifier_type,freeze_strategy,accuracy,f1_macro,f1_weighted,eval_loss,total_parameters,trainable_parameters,latency_ms_per_sample,gpu_memory_mb,training_time_seconds,learning_rate,batch_size,effective_batch_size,num_epochs,seed,timestamp
+ag_news,c1_linear_probing,distilbert,linear,frozen_all,0.8997368421052632,0.8995151559961727,0.8995151559961727,0.28817959849824426,66365956,3076,3.6525,404.06,339.43,0.001,32,32,3,42,2026-05-12T21:02:27
+sst2,c1_linear_probing,distilbert,linear,frozen_all,0.8360091743119266,0.8359606345514556,0.836012410295958,0.3735743447073868,66364418,1538,3.7085,404.06,186.15,0.001,32,32,3,42,2026-05-12T21:14:31
+yelp_reviews,c1_linear_probing,distilbert,linear,frozen_all,0.545,0.5427679362602598,0.5427679362602599,1.0383690055465697,66366725,3845,7.5638,404.57,3958.81,0.001,16,16,3,42,2026-05-12T23:02:15

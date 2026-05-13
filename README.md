@@ -210,7 +210,7 @@ outputs/
 
 ## Reglas para el Equipo
 
-**Regla de oro: No modificar archivos dentro de `src/`.** Si hay un bug, reportarlo al arquitecto del pipeline para que lo corrija para todos.
+**Regla de oro: No modificar archivos dentro de `src/`.**
 
 ### División de trabajo
 
