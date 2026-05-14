@@ -1,0 +1,11 @@
+dataset_name: "yelp_review_full"
+dataset_subset: null
+text_column: "text"
+label_column: "label"
+num_labels: 5
+train_split: "train"
+validation_split: null        # se crea desde train con split 90/10
+test_split: "test"
+max_length: 256               # textos largos requieren más contexto
+batch_size: 16                # batch más pequeño por longitud y tamaño
+output_dataset_name: "yelp_reviews"
